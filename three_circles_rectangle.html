@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>D3 Challenge 4</title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  </head>
+
+  <body>
+
+<!-- Make an SVG with three circles and a rectangle.
+ -->
+    <script>
+
+    var datasetCircle = [5, 10, 15],
+        datasetRectangle = [30]
+        colorScale = d3.scale.category20b();
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", 600)
+        .attr("height", 600)
+
+    svg.selectAll("circle")
+      .data(datasetCircle)
+      .enter().append("circle")
+      .attr("cx", function(d,i) {return (i+1) * 100; })
+      .attr("cy", function(d,i) {return (i+1) * 100; })
+      .attr("r", 50)
+      .style("fill", function(d,i) { return colorScale(i); });
+
+    svg.selectAll("rect")
+      .data(datasetRectangle)
+      .enter().append("rect")
+      .attr("x", 400)
+      .attr("y", 400)
+      .attr("height", 100)
+      .attr("width", function(d) {return d*2})
+      .style("fill", function(d,i) {return colorScale(i+3); });
+
+
+    </script>
+  </body>
+</html>

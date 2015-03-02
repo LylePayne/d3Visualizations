@@ -1,0 +1,16 @@
+category	score	value
+personal insurance	Accuracy	0.6549253602
+personal insurance	Precision	0.3875706153
+personal insurance	Recall	0.1226007367
+food & utilities	Accuracy	0.04212899207
+food & utilities	Precision	0.1649964282
+food & utilities	Recall	0.2264703261
+house ops & tv/radio	Accuracy	0.0205105849
+house ops & tv/radio	Precision	0.04661418758
+house ops & tv/radio	Recall	0.05607267018
+major spend categories	Accuracy	0.03499961249
+major spend categories	Precision	0.05620291087
+major spend categories	Recall	0.0775801336
+age	Accuracy	0.06397602823
+age	Precision	0.07522172139
+age	Recall	0.2015266144

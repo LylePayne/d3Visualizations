@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>D3 Challenge 1</title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  </head>
+
+  <body>
+<!-- Make an SVG with five circles, each with a different color, using data. -->
+    <script>
+
+    var dataset = [5, 10, 15, 20, 25],
+        colorScale = d3.scale.category20b();
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", 600)
+        .attr("height", 600)
+
+    svg.selectAll("circle")
+      .data(dataset)
+      .enter().append("circle")
+      .attr("cx", function(d,i) { return (i+1) * 100; })
+      .attr("cy", 100)
+      .attr("r", function (d) {return d * 2})
+      .style("fill", function(d,i) { return colorScale(i); });
+
+
+    </script>
+  </body>
+</html>
